@@ -13,7 +13,7 @@ Test-First Development (TDD) Evidence
 To satisfy the rubric's requirement for building the product test-first, we established a failing behavioral test case (Red Phase) before writing any implementation logic.
 
 ### 🧪 Test-First Evidence
-![Initial TDD Failure](evidence/tdd-red-phase.png)
+![Initial TDD Failure](Docs/tdd-red-phase.png)
 *Verification of failing behavioral test case before implementation.*
 
 Task Decomposition
