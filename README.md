@@ -1,5 +1,5 @@
 Sprint 1 Planning
-Kanban Board: [Link to your Trello](https://trello.com/b/kbPXcjh0/social-matchmaking-sprint-1)
+Kanban Board: [Link to our Trello](https://trello.com/b/kbPXcjh0/social-matchmaking-sprint-1)
 
 Forecast: 15 Story Points.
 
