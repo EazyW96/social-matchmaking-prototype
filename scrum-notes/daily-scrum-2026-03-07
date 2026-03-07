@@ -1,0 +1,20 @@
+Sprint 1 Forecast
+
+Total Forecast: 28 Story Points
+
+Stories selected for Sprint 1:
+
+(5) Project Infrastructure Setup
+
+(8) Player Profile Data Model
+
+(8) Matchmaking Logic Prototype
+
+(5) Basic API Endpoints
+
+(2) Sprint 1 Planning, Tracking, and Review
+
+Rationale
+
+The team focused on foundational components needed for the matchmaking prototype.
+Sprint 1 prioritizes establishing the Node.js infrastructure, defining player data structures, implementing a basic matchmaking algorithm, exposing API endpoints, and documenting the Scrum process.
