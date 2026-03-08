@@ -25,7 +25,7 @@ To satisfy the rubric's requirement for building the product test-first, we esta
 ### 🧪 Test-First Evidence
 
 <p align="center">
-<img src="Docs/failing_Tdd.png" width="500">
+<img src="Docs/failing_Tdd.png" width="900">
 </p>
 
 *Verification of failing behavioral test case before implementation.*
@@ -37,11 +37,13 @@ To satisfy the rubric's requirement for building the product test-first, we esta
 We have decomposed our Sprint 1 stories into specific technical tasks to ensure clear accountability.
 
 **External API**
+
 - Research Steam / Riot documentation  
 - Register API keys  
 - Create HTTP request module  
 
 **User Profiles**
+
 - Design JSON schemas for attitude and play-style  
 - Build functions to save and retrieve user behavior data  
 
@@ -101,4 +103,4 @@ These components establish the technical base for implementing matchmaking funct
 
 - Implement matchmaking logic  
 - Expand API integration  
-- Increase automated test coverage  
+- Increase automated test coverage
