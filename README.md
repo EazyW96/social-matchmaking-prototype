@@ -6,7 +6,7 @@ Forecast: 28 Story Points.
 Rationale: Our team is focusing on the foundational Node.js environment, the core Web Service API connection, and the user behavior data structures. This ensures we have a stable, verifiable prototype by the March 8, 2026 deadline.
 
 ## 📈 Sprint 1 Burndown Chart
-![Burndown Chart](burndown_sprint1.png)
+![Burndown Chart](artifacts/burndown_sprint1.png)
 
 🛠️ Implementation Progress
 Test-First Development (TDD) Evidence
