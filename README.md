@@ -57,7 +57,7 @@ Our team conducted a Sprint 1 coordination meeting to review progress and confir
 
 ### Meeting Evidence
 
-![Sprint 1 Meeting](Docs/sprint1_meeting.png)
+![Sprint 1 Meeting](Docs/sprint1_meeting.PNG)
 
 ---
 
