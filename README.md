@@ -6,14 +6,14 @@ Forecast: 28 Story Points.
 Rationale: Our team is focusing on the foundational Node.js environment, the core Web Service API connection, and the user behavior data structures. This ensures we have a stable, verifiable prototype by the March 8, 2026 deadline.
 
 ## 📈 Sprint 1 Burndown Chart
-![Sprint 1 Burndown](artifacts/failing Tdd.png)
+![Sprint 1 Burndown](artifacts/burndown_sprint1.png)
 
 🛠️ Implementation Progress
 Test-First Development (TDD) Evidence
 To satisfy the rubric's requirement for building the product test-first, we established a failing behavioral test case (Red Phase) before writing any implementation logic.
 
 ### 🧪 Test-First Evidence
-![Initial TDD Failure](Docs/tdd-red-phase.png)
+![Initial TDD Failure](Docs/failing Tdd.png)
 *Verification of failing behavioral test case before implementation.*
 
 Task Decomposition
