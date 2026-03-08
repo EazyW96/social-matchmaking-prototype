@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "username": "AcePlayer",
+    "age": 22,
+    "skillLevel": "Intermediate",
+    "behaviorScore": 8,
+    "preferredGameModes": ["Ranked", "Duo"],
+    "availability": "Evenings",
+    "region": "NA-East",
+    "platform": "PC",
+    "bio": "Competitive team player."
+  }
+]
