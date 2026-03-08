@@ -1,0 +1,23 @@
+## 🗓️ Daily Scrum Evidence
+
+Date: March 7, 2026  
+Platform: Microsoft Teams  
+
+Participants:
+- Elliotte Wideman
+- Gabriel Jean-Louis
+- Steve Seukap Dieuyou
+
+**What did you do in the last 24 hours?**
+- Elliotte: Completed the burndown chart and finalized sprint documentation.
+- Gabriel: Worked on initial Node.js API connection prototype.
+- Steve: Implemented user profile JSON schema and testing structure.
+
+**What will you do in the next 24 hours?**
+- Elliotte: Prepare the Sprint Review presentation and finalize repository documentation.
+- Gabriel: Continue integrating external API calls.
+- Steve: Expand test cases and verify user data storage functions.
+
+**Impediments**
+- Minor delays coordinating tasks on the Trello board.
+- Plan: clarify task assignments and update board daily.
