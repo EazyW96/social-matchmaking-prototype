@@ -10,7 +10,9 @@ Kanban Board: [Link to our Trello](https://trello.com/b/kbPXcjh0/social-matchmak
 
 ## 📈 Sprint 1 Burndown Chart
 
-![Sprint 1 Burndown](artifacts/burndown_sprint1.png)
+<p align="center">
+<img src="artifacts/burndown_sprint1.png" width="700">
+</p>
 
 ---
 
@@ -22,7 +24,9 @@ To satisfy the rubric's requirement for building the product test-first, we esta
 
 ### 🧪 Test-First Evidence
 
-![Initial TDD Failure](Docs/failing_Tdd.png)
+<p align="center">
+<img src="Docs/failing_Tdd.png" width="500">
+</p>
 
 *Verification of failing behavioral test case before implementation.*
 
@@ -33,13 +37,13 @@ To satisfy the rubric's requirement for building the product test-first, we esta
 We have decomposed our Sprint 1 stories into specific technical tasks to ensure clear accountability.
 
 **External API**
-- Research Steam / Riot documentation
-- Register API keys
-- Create HTTP request module
+- Research Steam / Riot documentation  
+- Register API keys  
+- Create HTTP request module  
 
 **User Profiles**
-- Design JSON schemas for attitude and play-style
-- Build functions to save and retrieve user behavior data
+- Design JSON schemas for attitude and play-style  
+- Build functions to save and retrieve user behavior data  
 
 ---
 
@@ -50,14 +54,17 @@ Our team conducted a Sprint 1 coordination meeting to review progress and confir
 **Meeting Date:** March 7, 2026  
 **Platform:** Microsoft Teams  
 
-**Participants**
-- Elliotte Wideman
-- Gabriel Jean-Louis
-- Steve Seukap Dieuyou
+### Participants
+
+- Elliotte Wideman  
+- Gabriel Jean-Louis  
+- Steve Seukap Dieuyou  
 
 ### Meeting Evidence
 
-![Sprint 1 Meeting](Docs/Sprint1_meeting.PNG)
+<p align="center">
+<img src="Docs/Sprint1_meeting.PNG" width="450">
+</p>
 
 ---
 
@@ -67,11 +74,11 @@ During Sprint 1 the team completed the foundational setup for the Social Matchma
 
 Completed work includes:
 
-- Node.js development environment setup
-- Initial external API integration structure
-- User behavior data schema design
-- Test-first development workflow using Jest
-- Sprint progress tracking with Trello and a burndown chart
+- Node.js development environment setup  
+- Initial external API integration structure  
+- User behavior data schema design  
+- Test-first development workflow using Jest  
+- Sprint progress tracking with Trello and a burndown chart  
 
 These components establish the technical base for implementing matchmaking functionality in future sprints.
 
@@ -80,15 +87,18 @@ These components establish the technical base for implementing matchmaking funct
 ## 🔄 Sprint Retrospective
 
 **What went well**
-- Strong coordination through Microsoft Teams meetings
-- Clear task tracking using Trello
-- Early use of Test-Driven Development
+
+- Strong coordination through Microsoft Teams meetings  
+- Clear task tracking using Trello  
+- Early use of Test-Driven Development  
 
 **What could improve**
-- More frequent Trello updates
-- Earlier integration testing
+
+- More frequent updates to the Trello board  
+- Earlier integration testing  
 
 **Next Sprint Focus**
-- Implement matchmaking logic
-- Expand API integration
-- Increase automated test coverage
+
+- Implement matchmaking logic  
+- Expand API integration  
+- Increase automated test coverage  
