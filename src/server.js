@@ -7,6 +7,10 @@ const matchmaker = require("./services/matchmaker");
 const app = express();
 const PORT = 3000;
 
+/* -------------------- */
+/* Middleware */
+/* -------------------- */
+
 app.use(express.json());
 
 /* -------------------- */
@@ -56,7 +60,8 @@ app.post("/match", (req, res) => {
     });
   }
 
-  const result = matchmaker.evaluateMatch(playerA, playerB);
+  // Call the correct matchmaking function
+  const result = matchmaker.evaluateMatchStability(playerA, playerB);
 
   res.json(result);
 });

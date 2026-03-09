@@ -194,3 +194,47 @@ Example Response:
     "bio": "Competitive team player."
   }
 ]
+
+---
+
+## API Demonstration
+
+### POST /match
+
+This endpoint evaluates the compatibility between two players based on skill level and attitude.
+
+Endpoint:
+
+```
+POST http://localhost:3000/match
+```
+
+Example Request Body:
+
+```json
+{
+  "playerA": {
+    "name": "AcePlayer",
+    "skill": 50,
+    "attitude": "Positive"
+  },
+  "playerB": {
+    "name": "ProJacob",
+    "skill": 48,
+    "attitude": "Positive"
+  }
+}
+```
+
+Example Response:
+
+```json
+{
+  "compatible": true,
+  "skillDifference": 2,
+  "attitudeMatch": true,
+  "score": 2
+}
+```
+
+This demonstrates the matchmaking logic implemented in `src/services/matchmaker.js`.
