@@ -68,39 +68,117 @@ Our team conducted a Sprint 1 coordination meeting to review progress and confir
 <img src="Docs/Sprint1_meeting.PNG" width="450">
 </p>
 
----
-
-## 🔎 Sprint Review
-
-During Sprint 1 the team completed the foundational setup for the Social Matchmaking Prototype.
-
-Completed work includes:
-
-- Node.js development environment setup  
-- Initial external API integration structure  
-- User behavior data schema design  
-- Test-first development workflow using Jest  
-- Sprint progress tracking with Trello and a burndown chart  
-
-These components establish the technical base for implementing matchmaking functionality in future sprints.
+This meeting demonstrates **team collaboration and coordination** during the sprint.
 
 ---
 
-## 🔄 Sprint Retrospective
+# Daily Scrum Evidence
 
-**What went well**
+Daily Scrum discussions addressed three key questions:
 
-- Strong coordination through Microsoft Teams meetings  
-- Clear task tracking using Trello  
-- Early use of Test-Driven Development  
+### What did you complete in the last 24 hours?
 
-**What could improve**
+- Elliotte Wideman implemented the Express server and routing.
+- Gabriel Jean-Louis researched external API documentation.
+- Steve Dieuyou worked on the player profile schema.
 
-- More frequent updates to the Trello board  
-- Earlier integration testing  
+### What will you complete in the next 24 hours?
 
-**Next Sprint Focus**
+- Implement the `/players` endpoint
+- Integrate matchmaking service logic
+- Add unit tests
 
-- Implement matchmaking logic  
-- Expand API integration  
-- Increase automated test coverage
+### Impediments
+
+- Initial uncertainty regarding API structure
+- Resolved through team discussion and reviewing Express documentation.
+
+---
+
+# Working Software Increment
+
+The Sprint 1 prototype includes a **working Node.js REST API**.
+
+The API provides endpoints that return player data and enable matchmaking logic.
+
+---
+
+# API Prototype Demonstration
+
+## API Home Endpoint
+
+Endpoint:
+
+
+Example Response:
+
+```json
+{
+  "message": "Social Matchmaking API",
+  "description": "Sprint 1 prototype matchmaking service",
+  "endpoints": {
+    "getPlayers": "GET /players",
+    "createMatch": "POST /match"
+  }
+}
+
+## GET /players
+
+[
+  {
+    "id": 1,
+    "username": "AcePlayer",
+    "age": 22,
+    "skillLevel": "Intermediate",
+    "behaviorScore": 8,
+    "preferredGameModes": ["Ranked","Duo"],
+    "availability": "Evenings",
+    "region": "NA-East",
+    "platform": "PC",
+    "bio": "Competitive team player."
+  }
+]
+
+---
+
+## API Demonstration
+
+### POST /match
+
+This endpoint evaluates the compatibility between two players based on skill level and attitude.
+
+Endpoint:
+
+```
+POST http://localhost:3000/match
+```
+
+Example Request Body:
+
+```json
+{
+  "playerA": {
+    "name": "AcePlayer",
+    "skill": 50,
+    "attitude": "Positive"
+  },
+  "playerB": {
+    "name": "ProJacob",
+    "skill": 48,
+    "attitude": "Positive"
+  }
+}
+```
+
+Example Response:
+
+```json
+{
+  "compatible": true,
+  "skillDifference": 2,
+  "attitudeMatch": true,
+  "score": 2
+}
+```
+
+This demonstrates the matchmaking logic implemented in `src/services/matchmaker.js`.
