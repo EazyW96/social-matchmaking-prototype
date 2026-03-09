@@ -33,7 +33,7 @@ This ensures we have a stable prototype before the **March 8, 2026 deadline**.
 # Sprint 1 Burndown Chart
 
 <p align="center">
-<img src="Docs/burndown_sprint1.png" width="700">
+<img src="artifacts/burndown_sprint1.png" width="700">
 </p>
 
 The burndown chart tracks the number of story points remaining throughout the sprint.
