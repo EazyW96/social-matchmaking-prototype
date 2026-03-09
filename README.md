@@ -73,7 +73,7 @@ To follow the rubric requirement of **building the product test-first**, the tea
 This represents the **Red phase of the TDD cycle**.
 
 <p align="center">
-<img src="Docs/failing_Tdd.png" width="900">
+<img src="Docs/tdd-red-phase.png" width="900">
 </p>
 
 The test initially failed, confirming that the behavior was not yet implemented.  
