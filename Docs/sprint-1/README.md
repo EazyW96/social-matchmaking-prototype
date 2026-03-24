@@ -6,6 +6,14 @@ The goal of Sprint 1 was to establish the foundational backend service using **N
 
 ---
 
+# 🚀 Working Prototype (Sprint 1)
+
+Access the working Sprint 1 prototype here:
+
+https://github.com/EazyW96/social-matchmaking-prototype/tree/sprint-1/Docs/sprint-1
+
+---
+
 # Sprint 1 Planning
 
 ## Kanban Board
@@ -45,18 +53,21 @@ The burndown chart tracks the number of story points remaining throughout the sp
 
 # Task Decomposition
 
-## External API Tasks
+## Core Backend Tasks
 
-- Research Steam / Riot API documentation  
-- Register API keys  
-- Create HTTP request module  
-- Prepare service structure for external integrations  
+- Set up Node.js and Express server  
+- Create base API routing structure  
+- Implement API home endpoint (`/`)  
+- Implement `/players` endpoint using mock player data  
+- Implement `/match` endpoint for compatibility evaluation  
+- Organize project structure for routes, services, and data  
 
 ## User Profile Tasks
 
 - Design JSON schemas for player behavior and play-style  
 - Build functions for storing and retrieving player data  
 - Implement data models for matchmaking inputs  
+- Create mock player profiles for testing and demonstration  
 
 ---
 
@@ -78,7 +89,7 @@ The project uses **Jest** for automated testing.
 
 ## Run tests using:
 
-    npm test
+npm test
 
 The repository includes **more than 10 passing unit tests** as required by the sprint rubric.
 
@@ -112,7 +123,7 @@ The team collaborated through meetings and shared development sessions while bui
 ### What did you complete in the last 24 hours?
 
 - Elliotte Wideman implemented the Express server and routing  
-- Gabriel Jean-Louis researched external API documentation  
+- Gabriel Jean-Louis researched matchmaking concepts for reference  
 - Steve Dieuyou worked on the player profile schema  
 
 ### What will you complete in the next 24 hours?
@@ -130,7 +141,7 @@ The team collaborated through meetings and shared development sessions while bui
 
 # Working Software Increment
 
-The Sprint 1 prototype includes a **working Node.js REST API**.
+The Sprint 1 prototype includes a **working Node.js REST API built using custom logic and mock data**.
 
 ---
 
@@ -140,18 +151,18 @@ The Sprint 1 prototype includes a **working Node.js REST API**.
 
 Endpoint:
 
-    GET http://localhost:3000/
+GET http://localhost:3000/
 
 Example Response:
 
-    {
-      "message": "Social Matchmaking API",
-      "description": "Sprint 1 prototype matchmaking service",
-      "endpoints": {
-        "getPlayers": "GET /players",
-        "createMatch": "POST /match"
-      }
-    }
+{
+  "message": "Social Matchmaking API",
+  "description": "Sprint 1 prototype matchmaking service",
+  "endpoints": {
+    "getPlayers": "GET /players",
+    "createMatch": "POST /match"
+  }
+}
 
 ---
 
@@ -159,24 +170,24 @@ Example Response:
 
 Endpoint:
 
-    GET http://localhost:3000/players
+GET http://localhost:3000/players
 
 Example Response:
 
-    [
-      {
-        "id": 1,
-        "username": "AcePlayer",
-        "age": 22,
-        "skillLevel": "Intermediate",
-        "behaviorScore": 8,
-        "preferredGameModes": ["Ranked","Duo"],
-        "availability": "Evenings",
-        "region": "NA-East",
-        "platform": "PC",
-        "bio": "Competitive team player."
-      }
-    ]
+[
+  {
+    "id": 1,
+    "username": "AcePlayer",
+    "age": 22,
+    "skillLevel": "Intermediate",
+    "behaviorScore": 8,
+    "preferredGameModes": ["Ranked","Duo"],
+    "availability": "Evenings",
+    "region": "NA-East",
+    "platform": "PC",
+    "bio": "Competitive team player."
+  }
+]
 
 ---
 
@@ -186,30 +197,30 @@ Example Response:
 
 Endpoint:
 
-    POST http://localhost:3000/match
+POST http://localhost:3000/match
 
 Example Request Body:
 
-    {
-      "playerA": {
-        "name": "AcePlayer",
-        "skill": 50,
-        "attitude": "Positive"
-      },
-      "playerB": {
-        "name": "ProJacob",
-        "skill": 48,
-        "attitude": "Positive"
-      }
-    }
+{
+  "playerA": {
+    "name": "AcePlayer",
+    "skill": 50,
+    "attitude": "Positive"
+  },
+  "playerB": {
+    "name": "ProJacob",
+    "skill": 48,
+    "attitude": "Positive"
+  }
+}
 
 Example Response:
 
-    {
-      "compatible": true,
-      "skillDifference": 2,
-      "attitudeMatch": true,
-      "score": 2
-    }
+{
+  "compatible": true,
+  "skillDifference": 2,
+  "attitudeMatch": true,
+  "score": 2
+}
 
-This demonstrates the matchmaking logic implemented in `src/services/matchmaker.js`.
+This demonstrates the custom matchmaking logic implemented in `src/services/matchmaker.js` using mock player data for Sprint 1.
