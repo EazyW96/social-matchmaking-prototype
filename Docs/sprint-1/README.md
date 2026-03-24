@@ -33,7 +33,7 @@ This ensures we have a stable prototype before the **March 8, 2026 deadline**.
 # Sprint 1 Burndown Chart
 
 <p align="center">
-<img src="Docs/sprint-1/artifacts/burndown_sprint1.png" width="700">
+<img src="artifacts/burndown_sprint1.png" width="700">
 </p>
 
 The burndown chart tracks the number of story points remaining throughout the sprint.
@@ -65,7 +65,7 @@ The burndown chart tracks the number of story points remaining throughout the sp
 ## Test-First Development (TDD)
 
 <p align="center">
-<img src="Docs/sprint-1/artifacts/tdd-red-phase.png" width="900">
+<img src="artifacts/tdd-red-phase.png" width="900">
 </p>
 
 The test initially failed, confirming that the behavior was not yet implemented.
@@ -102,7 +102,7 @@ The team collaborated through meetings and shared development sessions while bui
 - Steve Seukap Dieuyou  
 
 <p align="center">
-<img src="Docs/sprint-1/meeting-evidence/Sprint1_meeting.PNG" width="450">
+<img src="meeting-evidence/Sprint1_meeting.PNG" width="450">
 </p>
 
 ---
