@@ -33,34 +33,30 @@ This ensures we have a stable prototype before the **March 8, 2026 deadline**.
 # Sprint 1 Burndown Chart
 
 <p align="center">
-<img src="artifacts/burndown_sprint1.png" width="700">
+<img src="Docs/sprint-1/artifacts/burndown_sprint1.png" width="700">
 </p>
 
 The burndown chart tracks the number of story points remaining throughout the sprint.
 
-* X-Axis → Sprint Days  
-* Y-Axis → Remaining Story Points
-
-The chart demonstrates progress from **initial story points to zero remaining points** by the end of the sprint.
+- X-Axis → Sprint Days  
+- Y-Axis → Remaining Story Points  
 
 ---
 
 # Task Decomposition
 
-Sprint stories were decomposed into technical tasks.
-
 ## External API Tasks
 
-- Research Steam / Riot API documentation
-- Register API keys
-- Create HTTP request module
-- Prepare service structure for external integrations
+- Research Steam / Riot API documentation  
+- Register API keys  
+- Create HTTP request module  
+- Prepare service structure for external integrations  
 
 ## User Profile Tasks
 
-- Design JSON schemas for player behavior and play-style
-- Build functions for storing and retrieving player data
-- Implement data models for matchmaking inputs
+- Design JSON schemas for player behavior and play-style  
+- Build functions for storing and retrieving player data  
+- Implement data models for matchmaking inputs  
 
 ---
 
@@ -68,16 +64,11 @@ Sprint stories were decomposed into technical tasks.
 
 ## Test-First Development (TDD)
 
-To follow the rubric requirement of **building the product test-first**, the team created a failing behavioral test before implementing the functionality.
-
-This represents the **Red phase of the TDD cycle**.
-
 <p align="center">
-<img src="Docs/tdd-red-phase.png" width="900">
+<img src="Docs/sprint-1/artifacts/tdd-red-phase.png" width="900">
 </p>
 
-The test initially failed, confirming that the behavior was not yet implemented.  
-Implementation was then developed to make the test pass.
+The test initially failed, confirming that the behavior was not yet implemented.
 
 ---
 
@@ -85,15 +76,9 @@ Implementation was then developed to make the test pass.
 
 The project uses **Jest** for automated testing.
 
-Testing includes:
+## Run tests using:
 
-- Behavioral test (BDD / A-TDD)
-- Matchmaking compatibility tests
-- Player profile validation tests
-- Match stability logic
-
-Run tests using:
-
+    npm test
 
 The repository includes **more than 10 passing unit tests** as required by the sprint rubric.
 
@@ -103,59 +88,49 @@ The repository includes **more than 10 passing unit tests** as required by the s
 
 The team collaborated through meetings and shared development sessions while building the API and testing components.
 
-Evidence of collaboration is shown below.
-
 ---
 
 # Sprint 1 Meeting Evidence
 
-Our team conducted a coordination meeting to review progress and finalize sprint deliverables.
-
 **Meeting Date:** March 7, 2026  
-**Platform:** Microsoft Teams
+**Platform:** Microsoft Teams  
 
 ### Participants
 
-- Elliotte Wideman
-- Gabriel Jean-Louis
-- Steve Seukap Dieuyou
+- Elliotte Wideman  
+- Gabriel Jean-Louis  
+- Steve Seukap Dieuyou  
 
 <p align="center">
-<img src="Docs/Sprint1_meeting.PNG" width="450">
+<img src="Docs/sprint-1/meeting-evidence/Sprint1_meeting.PNG" width="450">
 </p>
-
-This meeting demonstrates **team collaboration and coordination** during the sprint.
 
 ---
 
 # Daily Scrum Evidence
 
-Daily Scrum discussions addressed three key questions:
-
 ### What did you complete in the last 24 hours?
 
-- Elliotte Wideman implemented the Express server and routing.
-- Gabriel Jean-Louis researched external API documentation.
-- Steve Dieuyou worked on the player profile schema.
+- Elliotte Wideman implemented the Express server and routing  
+- Gabriel Jean-Louis researched external API documentation  
+- Steve Dieuyou worked on the player profile schema  
 
 ### What will you complete in the next 24 hours?
 
-- Implement the `/players` endpoint
-- Integrate matchmaking service logic
-- Add unit tests
+- Implement the /players endpoint  
+- Integrate matchmaking service logic  
+- Add unit tests  
 
 ### Impediments
 
-- Initial uncertainty regarding API structure
-- Resolved through team discussion and reviewing Express documentation.
+- Initial uncertainty regarding API structure  
+- Resolved through team discussion  
 
 ---
 
 # Working Software Increment
 
 The Sprint 1 prototype includes a **working Node.js REST API**.
-
-The API provides endpoints that return player data and enable matchmaking logic.
 
 ---
 
@@ -165,35 +140,43 @@ The API provides endpoints that return player data and enable matchmaking logic.
 
 Endpoint:
 
+    GET http://localhost:3000/
 
 Example Response:
 
-```json
-{
-  "message": "Social Matchmaking API",
-  "description": "Sprint 1 prototype matchmaking service",
-  "endpoints": {
-    "getPlayers": "GET /players",
-    "createMatch": "POST /match"
-  }
-}
+    {
+      "message": "Social Matchmaking API",
+      "description": "Sprint 1 prototype matchmaking service",
+      "endpoints": {
+        "getPlayers": "GET /players",
+        "createMatch": "POST /match"
+      }
+    }
+
+---
 
 ## GET /players
 
-[
-  {
-    "id": 1,
-    "username": "AcePlayer",
-    "age": 22,
-    "skillLevel": "Intermediate",
-    "behaviorScore": 8,
-    "preferredGameModes": ["Ranked","Duo"],
-    "availability": "Evenings",
-    "region": "NA-East",
-    "platform": "PC",
-    "bio": "Competitive team player."
-  }
-]
+Endpoint:
+
+    GET http://localhost:3000/players
+
+Example Response:
+
+    [
+      {
+        "id": 1,
+        "username": "AcePlayer",
+        "age": 22,
+        "skillLevel": "Intermediate",
+        "behaviorScore": 8,
+        "preferredGameModes": ["Ranked","Duo"],
+        "availability": "Evenings",
+        "region": "NA-East",
+        "platform": "PC",
+        "bio": "Competitive team player."
+      }
+    ]
 
 ---
 
@@ -201,40 +184,32 @@ Example Response:
 
 ### POST /match
 
-This endpoint evaluates the compatibility between two players based on skill level and attitude.
-
 Endpoint:
 
-```
-POST http://localhost:3000/match
-```
+    POST http://localhost:3000/match
 
 Example Request Body:
 
-```json
-{
-  "playerA": {
-    "name": "AcePlayer",
-    "skill": 50,
-    "attitude": "Positive"
-  },
-  "playerB": {
-    "name": "ProJacob",
-    "skill": 48,
-    "attitude": "Positive"
-  }
-}
-```
+    {
+      "playerA": {
+        "name": "AcePlayer",
+        "skill": 50,
+        "attitude": "Positive"
+      },
+      "playerB": {
+        "name": "ProJacob",
+        "skill": 48,
+        "attitude": "Positive"
+      }
+    }
 
 Example Response:
 
-```json
-{
-  "compatible": true,
-  "skillDifference": 2,
-  "attitudeMatch": true,
-  "score": 2
-}
-```
+    {
+      "compatible": true,
+      "skillDifference": 2,
+      "attitudeMatch": true,
+      "score": 2
+    }
 
 This demonstrates the matchmaking logic implemented in `src/services/matchmaker.js`.
