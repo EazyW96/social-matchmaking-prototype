@@ -1,6 +1,5 @@
-# Sprint 1 – Social Matchmaking Prototype
+## 🔗 Working Prototype (Sprint 1)
 
-This branch contains the full implementation and documentation for **Sprint 1**.
+Access the working Sprint 1 prototype here:
 
-👉 View full Sprint 1 details here:  
-Docs/sprint-1/README.md
+https://github.com/EazyW96/social-matchmaking-prototype/tree/sprint-1/Docs/sprint-1
