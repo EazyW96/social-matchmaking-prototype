@@ -1,215 +1,159 @@
-# Social Matchmaking Prototype – Sprint 1
+# 🎮 Social Matchmaking Prototype
 
-This repository contains the **Sprint 1 prototype implementation** for the Social Matchmaking system.
+## 📌 Overview
 
-The goal of Sprint 1 was to establish the foundational backend service using **Node.js and Express**, while following **Agile Scrum practices** and **Test-Driven Development (TDD)**.
+Online multiplayer gaming has grown rapidly, but matchmaking systems still rely heavily on skill-based metrics. This often results in poor team dynamics, lack of communication, and negative player experiences.
 
----
+This project introduces a **behavior-aware matchmaking system** that connects players based on:
 
-# Sprint 1 Planning
+- Skill level  
+- Play-style  
+- Preferences  
+- Attitude / behavior  
 
-## Kanban Board
-
-Sprint backlog and task board:
-
-[Trello Sprint Board](https://trello.com/b/kbPXcjh0/social-matchmaking-sprint-1)
-
-This board contains the **user stories, tasks, and progress tracking** for Sprint 1.
+The goal is to **restore the human element in online gaming** and improve the overall player experience.
 
 ---
 
-## Sprint Forecast
+## 🎯 Project Goal
 
-**Forecast:** 28 Story Points
+The system matches players using both **game data** and **user-generated behavior profiles** to create more compatible and enjoyable teams.
 
-**Rationale**
+In addition, the platform enables:
 
-Our team focused on building the foundational Node.js backend environment, implementing the core Web Service API endpoints, and defining user behavior data structures.
-
-This ensures we have a stable prototype before the **March 8, 2026 deadline**.
-
----
-
-# Sprint 1 Burndown Chart
-
-<p align="center">
-<img src="Docs/sprint-1/artifacts/burndown_sprint1.png" width="700">
-</p>
-
-The burndown chart tracks the number of story points remaining throughout the sprint.
-
-- X-Axis → Sprint Days  
-- Y-Axis → Remaining Story Points  
+- Cross-game matchmaking  
+- Friend discovery  
+- Group formation with like-minded players  
 
 ---
 
-# Task Decomposition
+## ⚙️ Tech Stack
 
-## External API Tasks
-
-- Research Steam / Riot API documentation  
-- Register API keys  
-- Create HTTP request module  
-- Prepare service structure for external integrations  
-
-## User Profile Tasks
-
-- Design JSON schemas for player behavior and play-style  
-- Build functions for storing and retrieving player data  
-- Implement data models for matchmaking inputs  
+- Backend: Node.js, Express  
+- Testing: Jest (TDD / BDD approach)  
+- Project Management: Trello (Kanban board)  
+- Version Control: GitHub  
+- Methodology: Agile Scrum  
 
 ---
 
-# Implementation Progress
-
-## Test-First Development (TDD)
-
-<p align="center">
-<img src="Docs/sprint-1/artifacts/tdd-red-phase.png" width="900">
-</p>
-
-The test initially failed, confirming that the behavior was not yet implemented.
-
----
-
-# Unit Testing
-
-The project uses **Jest** for automated testing.
-
-## Run tests using:
-
-    npm test
-
-The repository includes **more than 10 passing unit tests** as required by the sprint rubric.
-
----
-
-# Pair Programming / Collaboration Evidence
-
-The team collaborated through meetings and shared development sessions while building the API and testing components.
-
----
-
-# Sprint 1 Meeting Evidence
-
-**Meeting Date:** March 7, 2026  
-**Platform:** Microsoft Teams  
-
-### Participants
+## 👥 Team
 
 - Elliotte Wideman  
 - Gabriel Jean-Louis  
 - Steve Seukap Dieuyou  
 
-<p align="center">
-<img src="Docs/sprint-1/meeting-evidence/Sprint1_meeting.PNG" width="450">
-</p>
+---
+
+## 🚀 Features
+
+- REST API for matchmaking  
+- Player profile modeling  
+- Behavior-based compatibility scoring  
+- Test-driven development (TDD)  
+- Agile sprint-based development  
 
 ---
 
-# Daily Scrum Evidence
+## 📂 Project Structure
 
-### What did you complete in the last 24 hours?
+Docs/  
+  sprint-1/  
+  sprint-2/  
+  sprint-3/  
 
-- Elliotte Wideman implemented the Express server and routing  
-- Gabriel Jean-Louis researched external API documentation  
-- Steve Dieuyou worked on the player profile schema  
-
-### What will you complete in the next 24 hours?
-
-- Implement the /players endpoint  
-- Integrate matchmaking service logic  
-- Add unit tests  
-
-### Impediments
-
-- Initial uncertainty regarding API structure  
-- Resolved through team discussion  
+src/  
+tests/  
 
 ---
 
-# Working Software Increment
+## 📅 Sprints
 
-The Sprint 1 prototype includes a **working Node.js REST API**.
+### 🟢 Sprint 1 – Foundation & Prototype
 
----
+- Node.js backend setup  
+- Initial API endpoints (`/players`, `/match`)  
+- TDD implementation  
+- Scrum artifacts (burndown, planning, daily scrums)  
 
-# API Prototype Demonstration
-
-## API Home Endpoint
-
-Endpoint:
-
-    GET http://localhost:3000/
-
-Example Response:
-
-    {
-      "message": "Social Matchmaking API",
-      "description": "Sprint 1 prototype matchmaking service",
-      "endpoints": {
-        "getPlayers": "GET /players",
-        "createMatch": "POST /match"
-      }
-    }
+**Full details:**  
+Docs/sprint-1/README.md  
 
 ---
 
-## GET /players
+### 🟡 Sprint 2 – Feature Expansion
 
-Endpoint:
+- Expanded matchmaking logic  
+- Increased unit testing (≥20 tests)  
+- CI/CD integration  
+- Continued Scrum execution  
 
-    GET http://localhost:3000/players
-
-Example Response:
-
-    [
-      {
-        "id": 1,
-        "username": "AcePlayer",
-        "age": 22,
-        "skillLevel": "Intermediate",
-        "behaviorScore": 8,
-        "preferredGameModes": ["Ranked","Duo"],
-        "availability": "Evenings",
-        "region": "NA-East",
-        "platform": "PC",
-        "bio": "Competitive team player."
-      }
-    ]
+**Full details:**  
+Docs/sprint-2/README.md  
 
 ---
 
-## API Demonstration
+### 🔵 Sprint 3 – Final Product
 
-### POST /match
+- Complete working system  
+- Enhanced matchmaking algorithm  
+- Full CI/CD pipeline  
+- Production-ready deployment  
 
-Endpoint:
+**Full details:**  
+Docs/sprint-3/README.md  
 
-    POST http://localhost:3000/match
+---
 
-Example Request Body:
+## 🔁 Agile & Scrum Practices
 
-    {
-      "playerA": {
-        "name": "AcePlayer",
-        "skill": 50,
-        "attitude": "Positive"
-      },
-      "playerB": {
-        "name": "ProJacob",
-        "skill": 48,
-        "attitude": "Positive"
-      }
-    }
+This project follows Agile Scrum methodology:
 
-Example Response:
+- Sprint planning & forecasting  
+- Task decomposition & Kanban tracking  
+- Daily scrums  
+- Sprint reviews & retrospectives  
+- Pair programming & collaboration  
+- Continuous Integration & Deployment  
 
-    {
-      "compatible": true,
-      "skillDifference": 2,
-      "attitudeMatch": true,
-      "score": 2
-    }
+---
 
-This demonstrates the matchmaking logic implemented in `src/services/matchmaker.js`.
+## 🧪 Testing Approach
+
+- Test-Driven Development (TDD)  
+- Behavior-Driven Development (BDD)  
+- Automated unit testing with Jest  
+
+Each sprint increases test coverage and system reliability.
+
+---
+
+## 🌐 API Overview (Sprint 1 Prototype)
+
+**Base URL:**  
+http://localhost:3000/
+
+**Endpoints:**
+
+- GET /players → Retrieve player data  
+- POST /match → Evaluate player compatibility  
+
+---
+
+## 📽️ Demo
+
+(To be added for final submission)
+
+---
+
+## 📌 Notes
+
+- This project is part of a Software Engineering course  
+- Development follows Agile Scrum practices  
+- Repository is updated continuously with sprint artifacts  
+
+---
+
+## ✅ Status
+
+🚧 In Progress — Final sprint nearing completion
