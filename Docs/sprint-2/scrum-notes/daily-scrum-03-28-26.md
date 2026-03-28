@@ -2,7 +2,7 @@
 
 The team conducted daily scrum meetings to track progress and identify blockers during Sprint 2.
 
-### Scrum Meeting Example (March 20)
+### Scrum Meeting  (March 28)
 
 #### 👤 Team
 
