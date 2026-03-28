@@ -5,7 +5,6 @@ const path = require("path");
 const matchmaker = require("./services/matchmaker");
 
 const app = express();
-const PORT = 3000;
 
 /* -------------------- */
 /* Middleware */
@@ -31,7 +30,7 @@ const players = JSON.parse(
 app.get("/", (req, res) => {
   res.json({
     message: "Social Matchmaking API",
-    description: "Sprint 1 prototype matchmaking service",
+    description: "Sprint 2 matchmaking service with CI/CD",
     endpoints: {
       getPlayers: "GET /players",
       createMatch: "POST /match"
@@ -60,16 +59,23 @@ app.post("/match", (req, res) => {
     });
   }
 
-  // Call the correct matchmaking function
-  const result = matchmaker.evaluateMatchStability(playerA, playerB);
-
-  res.json(result);
+  try {
+    const result = matchmaker.evaluateMatchStability(playerA, playerB);
+    res.json(result);
+  } catch (error) {
+    res.status(500).json({
+      error: "Matchmaking failed",
+      details: error.message
+    });
+  }
 });
 
 /* -------------------- */
 /* Start server */
 /* -------------------- */
 
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
