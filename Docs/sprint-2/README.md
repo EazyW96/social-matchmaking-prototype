@@ -1,19 +1,53 @@
-## 📊 Sprint Artifacts
+## 📊 Sprint 2 Artifacts & Evidence
 
-### 🌐 API Endpoints (Production)
+This section provides visual and functional evidence of the system implementation, testing practices, and deployment pipeline for Sprint 2.
 
-#### Home Endpoint
+---
+
+## 🌐 Deployed API (Production Evidence)
+
+The Social Matchmaking API was successfully deployed to a production-like environment using Render. The following endpoints were tested and verified:
+
+- `GET /` – API overview
+- `GET /players` – Retrieve player data
+- `POST /match` – Evaluate matchmaking compatibility
+
+### API Home Endpoint
 ![API Home](./artifacts/api-home-sprint2.png)
 
-#### Players Endpoint
+### API Players Endpoint
 ![API Players](./artifacts/api-players-sprint2.png)
 
-#### Match Endpoint
+### API Match Endpoint
 ![API Match](./artifacts/api-match-sprint2.png)
 
 ---
 
+## 📋 Kanban Board (Sprint Backlog & Task Tracking)
+
+The team used Trello to manage sprint backlog, task decomposition, and progress tracking.
+
+🔗 Trello Board: https://trello.com/b/kbPXcjh0/social-matchmaking-sprint-1
+
+The board includes:
+- Sprint backlog (stories → tasks)
+- Work in progress tracking
+- Testing and review stages
+
+![Kanban Board](./artifacts/kanbanboard.png)
+
+---
+
 ## 📉 Sprint Burndown Chart
+
+A burndown chart was created to track daily progress across the sprint (March 9 – March 28).
+
+- X-axis: Sprint days
+- Y-axis: Remaining story points
+- Blue line: Ideal progress
+- Red line: Actual progress
+
+The chart demonstrates steady progress toward sprint completion.
 
 ![Burndown Chart](./artifacts/burndown_sprint2.png)
 
@@ -21,11 +55,15 @@
 
 ## 🔁 Continuous Integration (CI)
 
-We implemented CI using GitHub Actions:
+A CI pipeline was implemented using GitHub Actions.
 
-- Runs on every push
+### CI Features:
+- Automatically triggers on push
+- Installs dependencies
 - Executes Jest test suite
-- Ensures build stability
+- Ensures code quality and build stability
+
+The successful pipeline run is shown below:
 
 ![CI Pipeline](./artifacts/ci-pipeline-sprint2.png)
 
@@ -33,11 +71,14 @@ We implemented CI using GitHub Actions:
 
 ## 🚀 Continuous Deployment (CD)
 
-We deployed the application using Render:
+Continuous Deployment was implemented using Render.
 
-- Automatic deployment from GitHub
-- Live production environment
-- Verified working endpoints
+### CD Features:
+- Automatic deployment from GitHub repository
+- Production environment provisioning
+- Live endpoint verification
+
+The deployment logs confirm that the application is running successfully in production:
 
 ![CD Deployment](./artifacts/cd-deployment-sprint2.png)
 
@@ -45,12 +86,14 @@ We deployed the application using Render:
 
 ## 🧪 Test-Driven Development (TDD)
 
-We followed a test-first approach:
+The team followed a Test-Driven Development (TDD) approach:
 
-- Wrote failing tests first
-- Implemented logic to pass tests
-- Refactored code
+1. Write failing test cases (Red phase)
+2. Implement functionality (Green phase)
+3. Refactor code
 
-### 🔴 Failing Test Evidence
+### Evidence of TDD (Failing Test)
+
+The following screenshot shows a failing test case before implementation was completed, demonstrating the test-first approach:
 
 ![TDD Red Phase](./artifacts/tdd-red-phase-sprint2.png)
