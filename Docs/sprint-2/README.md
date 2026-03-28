@@ -85,15 +85,12 @@ The team follows a test-first approach:
 
 ---
 
-## 7. Continuous Integration (CI)
+## Continuous Integration (CI)
 
-A CI pipeline will be implemented using GitHub Actions.
-
-- Automatically builds the project
-- Runs all tests on every push/merge
+We implemented a CI pipeline using GitHub Actions. The pipeline automatically builds the project and runs all unit tests on every push and pull request.
 
 📸 Evidence:
-- artifacts/ci-pipeline-sprint2.png (to be added)
+![CI Pipeline](artifacts/ci-pipeline-sprint2.png)
 
 ---
 
