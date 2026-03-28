@@ -86,3 +86,62 @@ test("Should return false for attitudeMatch when attitudes are different", () =>
 
   expect(report.attitudeMatch).toBe(false);
 });
+
+test("should handle large skill gap correctly", () => {
+  const p1 = { name: "A", skill: 1, attitude: "Positive" };
+  const p2 = { name: "B", skill: 50, attitude: "Positive" };
+
+  const result = evaluateMatchStability(p1, p2);
+
+  expect(result.skillDifference).toBe(49);
+  expect(result.score).toBe(1);
+});
+
+test("should mark incompatible when both skill and attitude differ", () => {
+  const p1 = { name: "A", skill: 1, attitude: "Positive" };
+  const p2 = { name: "B", skill: 20, attitude: "Negative" };
+
+  const result = evaluateMatchStability(p1, p2);
+
+  expect(result.compatible).toBe(false);
+});
+
+test("should handle identical players", () => {
+  const p = { name: "Same", skill: 10, attitude: "Calm" };
+
+  const result = evaluateMatchStability(p, p);
+
+  expect(result.skillDifference).toBe(0);
+  expect(result.attitudeMatch).toBe(true);
+  expect(result.score).toBe(2);
+});
+
+test("should handle large skill gap correctly", () => {
+  const p1 = { name: "A", skill: 1, attitude: "Positive" };
+  const p2 = { name: "B", skill: 50, attitude: "Positive" };
+
+  const result = evaluateMatchStability(p1, p2);
+
+  expect(result.skillDifference).toBe(49);
+  expect(result.score).toBe(1);
+});
+
+test("should mark incompatible when both skill and attitude differ", () => {
+  const p1 = { name: "A", skill: 1, attitude: "Positive" };
+  const p2 = { name: "B", skill: 20, attitude: "Negative" };
+
+  const result = evaluateMatchStability(p1, p2);
+
+  expect(result.compatible).toBe(false);
+});
+
+test("should handle identical players", () => {
+  const p = { name: "Same", skill: 10, attitude: "Calm" };
+
+  const result = evaluateMatchStability(p, p);
+
+  expect(result.skillDifference).toBe(0);
+  expect(result.attitudeMatch).toBe(true);
+  expect(result.score).toBe(2);
+});
+
