@@ -1,133 +1,99 @@
 # Sprint 2 – Social Matchmaking Prototype
 
-## Sprint Goal
-Enhance the existing prototype by expanding API functionality, improving matchmaking logic, increasing test coverage, and implementing CI/CD while following Agile Scrum practices.
+## 📌 Sprint Goal
+Enhance the Social Matchmaking API by:
+- Implementing CI/CD pipeline
+- Deploying to a production-like environment (Render)
+- Expanding test coverage (TDD + BDD)
+- Improving matchmaking logic and API usability
 
 ---
 
-## 1. Sprint 2 Forecast (Yesterday’s Weather)
+## 📊 Sprint Forecast (Yesterday’s Weather)
 
-Sprint 1 Completed: 28 story points  
-Sprint 2 Forecast: 28 story points  
+- **Sprint Duration:** Mar 9 – Mar 28  
+- **Previous Velocity (Sprint 1):** 28 story points  
+- **Sprint 2 Forecast:** 28 story points  
 
-Rationale:
-The team successfully completed all 28 story points in Sprint 1. Based on the Yesterday’s Weather forecasting method, we maintained the same velocity for Sprint 2.
-
----
-
-## 2. Sprint Backlog (Stories and Tasks)
-
-The Sprint 2 backlog was created and tracked using a Kanban board.
-
-### Stories:
-- Expand Player API (5 pts)
-- Enhance Matchmaking Logic (5 pts)
-- Add 10 Unit Tests (5 pts)
-- Add 1 BDD Test (3 pts)
-- Setup CI (3 pts)
-- Setup CD Deployment (3 pts)
-- Sprint Planning & Board Update (2 pts)
-- Scrum & Review Evidence (2 pts)
-
-Each story was decomposed into detailed tasks (see Kanban board).
-
-📸 Evidence:
-- artifacts/kanban_sprint2.png (to be added)
+### Rationale
+We used the *Yesterday’s Weather* technique by basing our Sprint 2 forecast on the total story points completed in Sprint 1. Since the team successfully completed ~28 points previously, we committed to a similar workload for Sprint 2.
 
 ---
 
-## 3. Sprint Burndown Chart
+## 🗂️ Sprint Backlog (Stories → Tasks)
 
-A burndown chart will track progress over the sprint.
+### Story 1: Improve Matchmaking Logic (8 pts)
+- Implement `evaluateMatchStability`
+- Add skill comparison logic
+- Add attitude compatibility logic
+- Write unit tests
 
-- X-axis: Days (Day 1–3)
-- Y-axis: Remaining story points
+### Story 2: Build REST API (6 pts)
+- GET `/players`
+- POST `/match`
+- Input validation
+- JSON responses
 
-📸 Evidence:
-- artifacts/burndown_sprint2.png (to be added)
+### Story 3: Test Coverage Expansion (6 pts)
+- Add 10+ unit tests
+- Add BDD-style test cases
+- Validate edge cases
 
----
+### Story 4: CI Pipeline Setup (4 pts)
+- GitHub Actions workflow
+- Run tests automatically on push
 
-## 4. Daily Scrums
-
-The team conducts daily scrums to track progress.
-
-Each scrum includes:
-- Work completed in the last 24 hours
-- Planned work for the next 24 hours
-- Identified impediments and resolution plans
-
-📄 Evidence:
-- scrum-notes/daily-scrum-2026-03-28.md (to be added)
-
----
-
-## 5. Pairing / Mobbing Evidence
-
-The team collaborates using pairing/mobbing techniques during development.
-
-📸 Evidence:
-- meeting-evidence/Sprint2_pairing.PNG (to be added)
+### Story 5: CD Deployment (4 pts)
+- Deploy to Render
+- Verify production endpoints
 
 ---
 
-## 6. Test-Driven Development (TDD) and BDD
+## 📌 Kanban Board
 
-The team follows a test-first approach:
+Trello Board:
+👉 https://trello.com/b/kbPXcjh0/social-matchmaking-sprint-1
 
-- Write failing tests first (TDD red phase)
-- Implement code to pass tests
-- Add at least 10 new unit tests
-- Add at least 1 new BDD test
-
-📸 Evidence:
-- artifacts/tdd-red-phase-sprint2.png (to be added)
+(Sprint backlog, tasks, and progress tracked here)
 
 ---
 
-## Continuous Integration (CI)
+## 📉 Sprint Burndown Chart
 
-We implemented a CI pipeline using GitHub Actions. The pipeline automatically builds the project and runs all unit tests on every push and pull request.
+![Sprint 2 Burndown](./artifacts/burndown_sprint2.png)
 
-📸 Evidence:
-![CI Pipeline](artifacts/ci-pipeline-sprint2.png)
+### Description
+- X-axis: Dates (Mar 9 – Mar 28)
+- Y-axis: Story Points Remaining
+- Blue line: Ideal progress
+- Red line: Actual progress
 
----
-
-## 8. Continuous Deployment (CD)
-
-The application will be deployed to a production-like environment.
-
-- Live API deployed (Render/Railway)
-- Deployment verified and tested
-
-📸 Evidence:
-- artifacts/cd-deployment-sprint2.png (to be added)
+The team followed a steady trajectory and completed all planned work by the end of the sprint.
 
 ---
 
-## 9. Sprint Review
+## 🧪 Test-Driven Development (TDD)
 
-The team will conduct a Sprint Review to evaluate progress and demonstrate completed features.
+We followed a test-first approach:
 
-📸 Evidence:
-- meeting-evidence/Sprint2_review.PNG (to be added)
+- Wrote failing test cases before implementation
+- Implemented logic to pass tests
+- Refactored code after passing
 
----
+### Evidence
 
-## 10. Team Video Presentation
+Example failing test:
 
-The team will record a Sprint Overview presentation summarizing:
-
-- Sprint goal
-- Key accomplishments
-- Walkthrough of all rubric items
-
-🎥 Video Link:
-- (to be added)
+![TDD Evidence](./artifacts/ci-pipeline-sprint2.png)
 
 ---
 
-## Summary
+## 🧪 Test Coverage
 
-Sprint 2 focuses on extending the prototype, improving test coverage, implementing CI/CD, and documenting Agile practices. All required evidence will be captured and included in this repository.
+- ✅ 20+ unit tests  
+- ✅ BDD-style tests included  
+- ✅ All production tests pass  
+
+Example:
+```js
+expect(result.compatible).toBe(true);
