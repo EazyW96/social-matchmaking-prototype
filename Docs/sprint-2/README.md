@@ -29,16 +29,8 @@ The Social Matchmaking API was successfully deployed to a production-like enviro
 
 This deployment demonstrates full CI/CD integration, enabling automated testing and continuous delivery to a live production environment.
 
----
+---:
 
-## 🧪 Example Test (POST Request)
-
-You can test the matchmaking endpoint using curl:
-
-```bash
-curl -X POST https://social-matchmaking-api.onrender.com/match \
--H "Content-Type: application/json" \
--d '{"player1": "A", "player2": "B"}'
 
 ---
 
