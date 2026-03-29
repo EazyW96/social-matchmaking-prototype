@@ -84,6 +84,31 @@ The deployment logs confirm that the application is running successfully in prod
 
 ---
 
+## 🌍 Live API Access (Try It Yourself)
+
+The Social Matchmaking API is deployed to a production environment and publicly accessible. You can test the available endpoints below:
+
+- 🔗 **API Base URL:**  
+  https://social-matchmaking-api.onrender.com/
+
+- 🔗 **Players Endpoint (GET):**  
+  https://social-matchmaking-api.onrender.com/players
+
+> ⚠️ The `/match` endpoint requires a POST request and cannot be accessed directly from the browser. Use tools like Postman or curl to test it.
+
+This deployment demonstrates full CI/CD integration, enabling automated testing and continuous delivery to a live production environment.
+
+---
+
+## 🧪 Example Test (POST Request)
+
+You can test the matchmaking endpoint using curl:
+
+```bash
+curl -X POST https://social-matchmaking-api.onrender.com/match \
+-H "Content-Type: application/json" \
+-d '{"player1": "A", "player2": "B"}'
+
 ## 🧪 Test-Driven Development (TDD)
 
 The team followed a Test-Driven Development (TDD) approach:
