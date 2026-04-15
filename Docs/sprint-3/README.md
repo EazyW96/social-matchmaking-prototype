@@ -1,54 +1,126 @@
 # Sprint 3 – Social Matchmaking Prototype
 
 ## Sprint Goal
-Complete the Social Matchmaking Prototype by finalizing features, expanding test coverage, validating CI/CD, and preparing the system as a complete software solution ready for customer review.
+Complete the Social Matchmaking Prototype by finalizing features, improving architecture, expanding test coverage, validating CI/CD, and preparing the system as a complete software solution ready for customer review.
 
 ---
 
 ## Sprint Forecast
-This sprint forecast will be based on the Yesterday’s Weather pattern using Sprint 2 velocity.
+
+Sprint 2 Completed: 28 story points  
+Sprint 3 Forecast: 28 story points  
+
+### Rationale
+The Sprint 3 forecast is based on the Yesterday’s Weather pattern using Sprint 2 velocity. Since the team completed 28 story points in Sprint 2, the same value was used for Sprint 3 to maintain a realistic and achievable workload.
 
 ---
 
 ## Sprint Backlog
-Sprint 3 tasks will be tracked through the Kanban board and decomposed into technical tasks.
+
+Stories and tasks were defined and tracked using the Kanban board and aligned with Sprint 3 goals.
+
+---
+
+## Kanban Board
+
+The Kanban board shows all Sprint 3 stories and tasks, including their progress across backlog, in-progress, and completed stages.
+
+![Sprint 3 Kanban Board](artifacts/sprint3_kanban.png)
 
 ---
 
 ## Burndown Chart
-The Sprint 3 burndown chart will be added here.
+
+The burndown chart tracks daily progress from March 30 to April 19.
+
+- X-axis: Dates (daily intervals)  
+- Y-axis: Story points remaining  
+- Includes both **actual progress** and **ideal burndown line**
+
+![Sprint 3 Burndown Chart](artifacts/burndown_sprint3.png)
 
 ---
 
 ## Daily Scrums
-Daily scrum evidence will be documented in the `scrum-notes` folder.
+
+Daily scrum notes were recorded and include:
+- Work completed
+- Planned work
+- Impediments and resolutions
+
+(See `scrum-notes` folder for detailed logs)
 
 ---
 
 ## Pairing / Mobbing Evidence
-Team collaboration evidence will be added in the `meeting-evidence` folder.
+
+Team collaboration was conducted through pairing and group debugging sessions.
+
+(Evidence located in `meeting-evidence` folder)
 
 ---
 
 ## TDD / BDD
-Sprint 3 will continue the test-first approach by expanding test coverage and validating behavior.
+
+The system follows a test-first development approach:
+
+- 30+ unit tests implemented  
+- Integration tests for endpoints  
+- BDD-style test included  
+- All tests passing  
+
+![Test Results](artifacts/tests_passing_sprint3.png)
 
 ---
 
-## Continuous Integration / Continuous Deployment
-CI and CD evidence will be updated here for Sprint 3.
+## Continuous Integration
+
+GitHub Actions automatically builds and tests the application on each push to main.
+
+![CI Pipeline](artifacts/ci_pipeline_sprint3.png)
+
+---
+
+## Continuous Deployment
+
+The application is deployed to a live environment using Render and verified through API testing.
+
+![Live API Deployment](artifacts/cd_live_api_sprint3.png)
 
 ---
 
 ## Sprint Review
-Sprint review evidence will be documented here.
+
+The Sprint Review demonstrated:
+- Completed features
+- Working API endpoints
+- Test coverage
+- Deployment readiness
+
+(Evidence located in `meeting-evidence` folder)
 
 ---
 
 ## Complete Software Solution
-Sprint 3 focuses on ensuring the application is complete, tested, and ready for customer review.
+
+The final system includes:
+
+- Matchmaking API
+- Player profile system
+- Input validation and error handling
+- Automated testing suite
+- CI/CD pipeline
+- Live deployment
 
 ---
 
 ## Team Video Presentation
-The Sprint 3 presentation link will be added here.
+
+The Sprint 3 presentation covers:
+- Sprint overview
+- Architecture improvements
+- Testing strategy
+- CI/CD pipeline
+- Live demo
+
+📌 YouTube Link: (add your link here)
