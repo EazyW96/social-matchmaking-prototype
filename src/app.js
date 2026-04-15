@@ -3,10 +3,6 @@ const playersRoutes = require("./routes/players.routes");
 const matchRoutes = require("./routes/match.routes");
 const errorHandler = require("./middleware/errorHandler");
 
-console.log(playersRoutes);
-console.log(matchRoutes);
-console.log(errorHandler);
-
 const app = express();
 
 /* -------------------- */
@@ -20,12 +16,13 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
     message: "Social Matchmaking API",
-    description: "Social Matchmaking API with live matchmaking, testing, and CI/CD",
+    description:
+      "Social Matchmaking API with live matchmaking, testing, and CI/CD",
     endpoints: {
       getPlayers: "GET /players",
       getPlayerById: "GET /players/:id",
-      createMatch: "POST /match"
-    }
+      createMatch: "POST /match",
+    },
   });
 });
 
