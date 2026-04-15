@@ -5,7 +5,22 @@ function createMatch(req, res, next) {
 
   if (!playerA || !playerB) {
     return res.status(400).json({
-      error: "Both playerA and playerB must be provided"
+      error: "Both playerA and playerB must be provided",
+    });
+  }
+
+  if (typeof playerA.skill !== "number" || typeof playerB.skill !== "number") {
+    return res.status(400).json({
+      error: "Both playerA.skill and playerB.skill must be numbers",
+    });
+  }
+
+  if (
+    typeof playerA.attitude !== "string" ||
+    typeof playerB.attitude !== "string"
+  ) {
+    return res.status(400).json({
+      error: "Both playerA.attitude and playerB.attitude must be strings",
     });
   }
 
@@ -18,5 +33,5 @@ function createMatch(req, res, next) {
 }
 
 module.exports = {
-  createMatch
+  createMatch,
 };
