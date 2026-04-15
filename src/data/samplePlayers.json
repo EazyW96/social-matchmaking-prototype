@@ -3,12 +3,42 @@
     "id": 1,
     "username": "AcePlayer",
     "age": 22,
+    "skill": 10,
     "skillLevel": "Intermediate",
+    "attitude": "Positive",
     "behaviorScore": 8,
     "preferredGameModes": ["Ranked", "Duo"],
     "availability": "Evenings",
     "region": "NA-East",
     "platform": "PC",
     "bio": "Competitive team player."
+  },
+  {
+    "id": 2,
+    "username": "CalmStriker",
+    "age": 24,
+    "skill": 11,
+    "skillLevel": "Intermediate",
+    "attitude": "Positive",
+    "behaviorScore": 9,
+    "preferredGameModes": ["Ranked", "Squad"],
+    "availability": "Weekends",
+    "region": "NA-East",
+    "platform": "PC",
+    "bio": "Prefers coordinated team play."
+  },
+  {
+    "id": 3,
+    "username": "ToxicRush",
+    "age": 20,
+    "skill": 18,
+    "skillLevel": "Advanced",
+    "attitude": "Negative",
+    "behaviorScore": 3,
+    "preferredGameModes": ["Ranked", "Solo"],
+    "availability": "Late Nights",
+    "region": "NA-West",
+    "platform": "Console",
+    "bio": "Highly skilled but not team friendly."
   }
 ]
