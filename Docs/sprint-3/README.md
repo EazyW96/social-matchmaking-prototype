@@ -25,7 +25,7 @@ Stories and tasks were defined and tracked using the Kanban board and aligned wi
 
 The Kanban board shows all Sprint 3 stories and tasks, including their progress across backlog, in-progress, and completed stages.
 
-![Sprint 3 Kanban Board](artifacts/sprint3_kanban.png)
+![Sprint 3 Kanban Board](./artifacts/sprint3_kanban.png)
 
 ---
 
@@ -37,7 +37,7 @@ The burndown chart tracks daily progress from March 30 to April 19.
 - Y-axis: Story points remaining  
 - Includes both **actual progress** and **ideal burndown line**
 
-![Sprint 3 Burndown Chart](artifacts/burndown_sprint3.png)
+![Sprint 3 Burndown Chart](./artifacts/burndown_sprint3.png)
 
 ---
 
@@ -69,7 +69,7 @@ The system follows a test-first development approach:
 - BDD-style test included  
 - All tests passing  
 
-![Test Results](artifacts/tests_passing_sprint3.png)
+![Test Results](./artifacts/tests_passing_sprint3.png)
 
 ---
 
@@ -77,7 +77,7 @@ The system follows a test-first development approach:
 
 GitHub Actions automatically builds and tests the application on each push to main.
 
-![CI Pipeline](artifacts/ci_pipeline_sprint3.png)
+![CI Pipeline](./artifacts/ci_pipeline_sprint3.png)
 
 ---
 
@@ -85,7 +85,7 @@ GitHub Actions automatically builds and tests the application on each push to ma
 
 The application is deployed to a live environment using Render and verified through API testing.
 
-![Live API Deployment](artifacts/cd_live_api_sprint3.png)
+![Live API Deployment](./artifacts/cd_live_api_sprint3.png)
 
 ---
 
