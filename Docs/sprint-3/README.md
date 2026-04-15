@@ -41,6 +41,30 @@ The burndown chart tracks daily progress from March 30 to April 19.
 
 ---
 
+## API Testing (Postman)
+
+The deployed API was tested using Postman against the live Render environment to verify endpoint functionality, validation, and error handling.
+
+### Root Endpoint
+![Root](./artifacts/postman_render_root_sprint3.png)
+
+### Get All Players
+![Players](./artifacts/postman_render_get_players_sprint3.png)
+
+### Get Player by ID
+![Player](./artifacts/postman_render_get_player_by_id_sprint3.png)
+
+### Player Not Found (Error Handling)
+![Not Found](./artifacts/postman_render_get_player_not_found_sprint3.png)
+
+### Matchmaking (Success)
+![Match Success](./artifacts/postman_render_match_success_sprint3.png)
+
+### Matchmaking (Validation Error)
+![Match Error](./artifacts/postman_render_match_error_sprint3.png)
+
+---
+
 ## Daily Scrums
 
 Daily scrum notes were recorded and include:
@@ -105,22 +129,22 @@ The Sprint Review demonstrated:
 
 The final system includes:
 
-- Matchmaking API
-- Player profile system
-- Input validation and error handling
-- Automated testing suite
-- CI/CD pipeline
-- Live deployment
+- Matchmaking API  
+- Player profile system  
+- Input validation and error handling  
+- Automated testing suite  
+- CI/CD pipeline  
+- Live deployment  
 
 ---
 
 ## Team Video Presentation
 
 The Sprint 3 presentation covers:
-- Sprint overview
-- Architecture improvements
-- Testing strategy
-- CI/CD pipeline
-- Live demo
+- Sprint overview  
+- Architecture improvements  
+- Testing strategy  
+- CI/CD pipeline  
+- Live demo  
 
 📌 YouTube Link: (add your link here)
