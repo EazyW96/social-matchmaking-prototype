@@ -54,6 +54,28 @@ test("should fail if behaviorScore is too high", () => {
   expect(validatePlayerProfile(player)).toBe(false);
 });
 
+test("should fail if age is zero", () => {
+  const player = {
+    username: "Test",
+    age: 0,
+    behaviorScore: 7,
+    preferredGameModes: ["Ranked"],
+  };
+
+  expect(validatePlayerProfile(player)).toBe(false);
+});
+
+test("should fail if age is null", () => {
+  const player = {
+    username: "Test",
+    age: null,
+    behaviorScore: 7,
+    preferredGameModes: ["Ranked"],
+  };
+
+  expect(validatePlayerProfile(player)).toBe(false);
+});
+
 test("should fail if preferredGameModes is not an array", () => {
   const player = {
     username: "Test",
