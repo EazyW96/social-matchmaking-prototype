@@ -75,3 +75,19 @@ test("should pass with minimal valid player", () => {
 
   expect(validatePlayerProfile(player)).toBe(true);
 });
+
+test("should pass when all player profile fields are present", () => {
+  const player = {
+    username: "FullProfileUser",
+    age: 25,
+    skillLevel: 80,
+    behaviorScore: 9,
+    preferredGameModes: ["Ranked", "Casual"],
+    availability: "Weekdays",
+    region: "NA",
+    platform: "PC",
+    bio: "Competitive player",
+  };
+
+  expect(validatePlayerProfile(player)).toBe(true);
+});
