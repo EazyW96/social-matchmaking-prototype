@@ -61,13 +61,13 @@ The deployed API was tested using Postman against the live Render environment to
 
 ![Player](./artifacts/postman_render_get_player_by_id_sprint3.png)
 
-### Player Not Found (Error Handling)
+
 
 ### Matchmaking (Success)
 
 ![Match Success](./artifacts/postman_render_match_success_sprint3.png)
 
-### Matchmaking (Validation Error)
+
 
 ---
 
