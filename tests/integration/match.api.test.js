@@ -1,50 +1,96 @@
 const request = require("supertest");
 const app = require("../../src/app");
 
-test("POST /match should return a compatibility report", async () => {
-  const res = await request(app)
-    .post("/match")
-    .send({
-      playerA: { name: "Alpha", skill: 10, attitude: "Positive" },
-      playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+describe("POST /match", () => {
+  describe("200 responses", () => {
+    test("returns full compatibility report when players are a good match", async () => {
+      const res = await request(app)
+        .post("/match")
+        .send({
+          playerA: { name: "Alpha", skill: 10, attitude: "Positive" },
+          playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+        });
+
+      expect(res.statusCode).toBe(200);
+      expect(res.body).toMatchObject({
+        compatible: true,
+        score: 2,
+        skillDifference: 1,
+        attitudeMatch: true,
+      });
     });
 
-  expect(res.statusCode).toBe(200);
-  expect(res.body.compatible).toBe(true);
-  expect(res.body.score).toBe(2);
-});
+    test("returns full report when compatible with score 1 (skill match only)", async () => {
+      const res = await request(app)
+        .post("/match")
+        .send({
+          playerA: { name: "Alpha", skill: 10, attitude: "Positive" },
+          playerB: { name: "Beta", skill: 11, attitude: "Negative" },
+        });
 
-test("POST /match should return 400 when players are missing", async () => {
-  const res = await request(app).post("/match").send({});
-
-  expect(res.statusCode).toBe(400);
-  expect(res.body.error).toBe("Both playerA and playerB must be provided");
-});
-
-test("POST /match should return 400 when skill is invalid", async () => {
-  const res = await request(app)
-    .post("/match")
-    .send({
-      playerA: { name: "Alpha", skill: "bad", attitude: "Positive" },
-      playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+      expect(res.statusCode).toBe(200);
+      expect(res.body).toMatchObject({
+        compatible: true,
+        score: 1,
+        skillDifference: 1,
+        attitudeMatch: false,
+      });
     });
 
-  expect(res.statusCode).toBe(400);
-  expect(res.body.error).toBe(
-    "Both playerA.skill and playerB.skill must be numbers",
-  );
-});
+    test("returns full report when incompatible (score 0)", async () => {
+      const res = await request(app)
+        .post("/match")
+        .send({
+          playerA: { name: "Alpha", skill: 1, attitude: "Positive" },
+          playerB: { name: "Beta", skill: 10, attitude: "Negative" },
+        });
 
-test("POST /match should return 400 when attitude is invalid", async () => {
-  const res = await request(app)
-    .post("/match")
-    .send({
-      playerA: { name: "Alpha", skill: 10, attitude: 123 },
-      playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+      expect(res.statusCode).toBe(200);
+      expect(res.body).toMatchObject({
+        compatible: false,
+        score: 0,
+        skillDifference: 9,
+        attitudeMatch: false,
+      });
+    });
+  });
+
+  describe("400 responses", () => {
+    test("returns 400 when both players are missing", async () => {
+      const res = await request(app).post("/match").send({});
+
+      expect(res.statusCode).toBe(400);
+      expect(res.body.error).toBe(
+        "Both playerA and playerB must be provided",
+      );
     });
 
-  expect(res.statusCode).toBe(400);
-  expect(res.body.error).toBe(
-    "Both playerA.attitude and playerB.attitude must be strings",
-  );
+    test("returns 400 when skill is not a number", async () => {
+      const res = await request(app)
+        .post("/match")
+        .send({
+          playerA: { name: "Alpha", skill: "bad", attitude: "Positive" },
+          playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+        });
+
+      expect(res.statusCode).toBe(400);
+      expect(res.body.error).toBe(
+        "Both playerA.skill and playerB.skill must be numbers",
+      );
+    });
+
+    test("returns 400 when attitude is not a string", async () => {
+      const res = await request(app)
+        .post("/match")
+        .send({
+          playerA: { name: "Alpha", skill: 10, attitude: 123 },
+          playerB: { name: "Beta", skill: 11, attitude: "Positive" },
+        });
+
+      expect(res.statusCode).toBe(400);
+      expect(res.body.error).toBe(
+        "Both playerA.attitude and playerB.attitude must be strings",
+      );
+    });
+  });
 });
