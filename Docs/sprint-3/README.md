@@ -193,4 +193,4 @@ The Sprint 3 presentation covers:
 - CI/CD pipeline
 - Live demo
 
-📌 YouTube Link: (add your link here)
+📌 YouTube Link: [Watch Sprint 3 Presentation](https://youtu.be/rzmY6Wg5YP8)

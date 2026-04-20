@@ -54,6 +54,28 @@ test("should fail if behaviorScore is too high", () => {
   expect(validatePlayerProfile(player)).toBe(false);
 });
 
+test("should fail if age is zero", () => {
+  const player = {
+    username: "Test",
+    age: 0,
+    behaviorScore: 7,
+    preferredGameModes: ["Ranked"],
+  };
+
+  expect(validatePlayerProfile(player)).toBe(false);
+});
+
+test("should fail if age is null", () => {
+  const player = {
+    username: "Test",
+    age: null,
+    behaviorScore: 7,
+    preferredGameModes: ["Ranked"],
+  };
+
+  expect(validatePlayerProfile(player)).toBe(false);
+});
+
 test("should fail if preferredGameModes is not an array", () => {
   const player = {
     username: "Test",
@@ -71,6 +93,22 @@ test("should pass with minimal valid player", () => {
     age: 18,
     behaviorScore: 5,
     preferredGameModes: ["Casual"],
+  };
+
+  expect(validatePlayerProfile(player)).toBe(true);
+});
+
+test("should pass when all player profile fields are present", () => {
+  const player = {
+    username: "FullProfileUser",
+    age: 25,
+    skillLevel: 80,
+    behaviorScore: 9,
+    preferredGameModes: ["Ranked", "Casual"],
+    availability: "Weekdays",
+    region: "NA",
+    platform: "PC",
+    bio: "Competitive player",
   };
 
   expect(validatePlayerProfile(player)).toBe(true);
