@@ -49,25 +49,58 @@ The burndown chart tracks daily progress from March 30 to April 19.
 
 The deployed API was tested using Postman against the live Render environment to verify endpoint functionality, validation, and error handling.
 
+Base URL:  
+https://social-matchmaking-api.onrender.com
+
+---
+
 ### Root Endpoint
+
+GET https://social-matchmaking-api.onrender.com/
+
+Confirms the API is running and returns available endpoints.
 
 ![Root](./artifacts/postman_render_root_sprint3.png)
 
+---
+
 ### Get All Players
+
+GET https://social-matchmaking-api.onrender.com/players
+
+Retrieves all players in the system.
 
 ![Players](./artifacts/postman_render_get_players_sprint3.png)
 
+---
+
 ### Get Player by ID
+
+GET https://social-matchmaking-api.onrender.com/players/1
+
+Retrieves a specific player by ID. Returns 404 if not found.
 
 ![Player](./artifacts/postman_render_get_player_by_id_sprint3.png)
 
-
+---
 
 ### Matchmaking (Success)
 
+POST https://social-matchmaking-api.onrender.com/match
+
+Evaluates compatibility between two players.
+
 ![Match Success](./artifacts/postman_render_match_success_sprint3.png)
 
+---
 
+### Matchmaking (Error Handling)
+
+POST https://social-matchmaking-api.onrender.com/match
+
+Handles invalid input such as missing fields or incorrect data types.
+
+![Match Error](./artifacts/postman_render_match_error_sprint3.png)
 
 ---
 
