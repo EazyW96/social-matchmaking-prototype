@@ -5,6 +5,17 @@ SWE 6813 – Web Service Engineering
 Spring Semester 2026  
 Group 2  
 
+## Sprint Documentation
+
+Access all sprint artifacts and deliverables:
+
+- Sprint 1: [View Documentation](Docs/sprint-1/README.md)  
+- Sprint 2: [View Documentation](Docs/sprint-2/README.md)  
+- Sprint 3: [View Documentation](Docs/sprint-3/README.md)  
+
+⭐ **Latest Sprint (Sprint 3 – Final Submission):**  
+https://github.com/EazyW96/social-matchmaking-prototype/blob/main/Docs/sprint-3/README.md
+
 Team Members:
 - Elliotte Wideman  
 - Gabriel Jean-louis  
