@@ -114,7 +114,7 @@ Daily scrum notes were recorded and include:
 
 Example Scrum Evidence:
 
-![Daily Scrum](./artifacts/daily_scrum_2026_04_15_sprint3.png)
+![Daily Scrum](./meeting-evidence/daily_scrum_2026_04_15_sprint3.png)
 
 (See `scrum-notes` folder for detailed logs)
 
@@ -124,7 +124,7 @@ Example Scrum Evidence:
 
 Team collaboration was conducted through pairing and group debugging sessions.
 
-![Pairing Evidence](./artifacts/pairing_evidence_sprint3.png)
+![Pairing Evidence](./meeting-evidence/pairing_evidence_sprint3.png)
 
 ---
 
