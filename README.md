@@ -5,6 +5,21 @@ SWE 6813 – Web Service Engineering
 Spring Semester 2026  
 Group 2  
 
+---
+
+## 🚀 Quick Access
+
+**Final Presentation Video:**  
+https://youtu.be/lvh3nD60iyE  
+
+**Live API:**  
+https://social-matchmaking-api.onrender.com  
+
+**Trello Board (Agile Tracking):**  
+https://trello.com/b/kbPXcjh0/social-matchmaking-ges-sprint-1  
+
+---
+
 ## Sprint Documentation
 
 Access all sprint artifacts and deliverables:
@@ -16,7 +31,10 @@ Access all sprint artifacts and deliverables:
 ⭐ **Latest Sprint (Sprint 3 – Final Submission):**  
 https://github.com/EazyW96/social-matchmaking-prototype/blob/main/Docs/sprint-3/README.md
 
-Team Members:
+---
+
+## Team Members
+
 - Elliotte Wideman  
 - Gabriel Jean-louis  
 - Steve Seukap Dieuyou  
@@ -35,7 +53,7 @@ This project aims to address these limitations by introducing a more human-cente
 
 The Social Matchmaking Prototype is an Agile software engineering project focused on improving online multiplayer matchmaking. Traditional systems rely heavily on statistics and rankings, but this prototype explores how incorporating human-centered attributes can lead to better team formation and communication.
 
-The system is developed incrementally using an Agile Scrum approach across multiple sprints. The team follows core Agile practices including sprint planning, Kanban tracking, burndown charts, daily scrum meetings, test-driven development (TDD), continuous integration (CI), and continuous deployment (CD).
+The system is developed incrementally using an Agile Scrum approach across three sprints. The team follows core Agile practices including sprint planning, Kanban tracking, burndown charts, daily scrum meetings, test-driven development (TDD), continuous integration (CI), and continuous deployment (CD).
 
 Technically, the system is implemented as a backend REST API using JavaScript, Node.js, and Express. Testing is handled with Jest, CI is managed with GitHub Actions, and deployment is handled through Render.
 
@@ -60,11 +78,14 @@ The current prototype provides a REST API that supports:
 - Evaluating compatibility between players  
 - Returning structured matchmaking results  
 
-### API Endpoints
+---
 
-- GET / → API overview  
-- GET /players → retrieve player profiles  
-- POST /match → evaluate compatibility between two players  
+## API Endpoints
+
+- Root → https://social-matchmaking-api.onrender.com/  
+- All Players → https://social-matchmaking-api.onrender.com/players  
+- Player by ID → https://social-matchmaking-api.onrender.com/players/1  
+- Matchmaking (POST) → https://social-matchmaking-api.onrender.com/match  
 
 ---
 
@@ -83,7 +104,7 @@ The current prototype provides a REST API that supports:
 
 This project follows the Scrum framework and includes:
 
-- Sprint-based development (Sprint 1 and Sprint 2)  
+- Sprint-based development (Sprint 1, Sprint 2, and Sprint 3)  
 - Yesterday’s Weather forecasting  
 - Task decomposition into backlog items  
 - Kanban board tracking using Trello  
@@ -94,72 +115,3 @@ This project follows the Scrum framework and includes:
 ---
 
 ## Repository Structure
-
-Docs/
-  sprint-1/
-  sprint-2/
-
-src/
-  data/
-  models/
-  services/
-  utils/
-
-tests/
-
----
-
-## Sprint Deliverables
-
-All sprint documentation and artifacts are located in the Docs directory:
-
-- Sprint 1 Deliverables → ./Docs/sprint-1/README.md  
-- Sprint 2 Deliverables → ./Docs/sprint-2/README.md  
-
-Each sprint includes:
-
-- planning documents  
-- Kanban board evidence  
-- burndown charts  
-- scrum notes  
-- testing artifacts  
-- CI/CD evidence  
-
----
-
-## Live Deployment
-
-The application is deployed in a production-like environment:
-
-https://social-matchmaking-api.onrender.com  
-
----
-
-## Testing
-
-Automated testing is implemented using Jest.
-
-To run tests locally:
-
-npm test
-
-Tests cover:
-
-- player validation  
-- matchmaking logic  
-- compatibility scoring  
-
----
-
-## Assumptions & Constraints
-
-- Players are interested in more personalized matchmaking  
-- A third-party system can integrate across multiple games  
-- Player data can be processed efficiently  
-- Some game APIs may limit accessible data  
-
----
-
-## Summary
-
-This project demonstrates how a software engineering team can design, build, test, and deploy a real-world system using Agile practices and modern development tools. The Social Matchmaking Prototype evolves across multiple sprints to improve matchmaking quality and create a more positive multiplayer gaming experience.
